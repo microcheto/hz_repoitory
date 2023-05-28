@@ -47,4 +47,51 @@ estrella
 
 shanon(estrella) #APLICAMOS LA FUNCION ANTERIOR CON NUESTRO VECTOR ESTRELLA
 
+#########################################################
+###############################################################################
+####### SIMPSON
+
+simpson <- function(x) {
+  return ( sum ( (x*(x-1)) / (sum(x)*(sum(x)-1)) ) )
+}
+
+# DRFINI UN VECTOR PARA PROBAR LAS FUNCIONES, SELECCIONA LA PRIMERA COLUMNA DE LA BASE DE DATOS
+# EN ESTE CASO CORRESPONDE AL ECOSISTEMA DE ESTRELLA
+a <- c ( lunetasnum [,1] )
+
+simpson(a)
+
+################################################################################
+####### CHAO1
+
+chao1 <- function(x) {
+  # SELECCIONA LAS ESPECIE QUE CUMPLEN CON LA CARACTERISTICA DE TENER UNO O DOS INDIVIDUOS, RESPECTIVAMENTE
+  s <- which(a==1)
+  d <- which(a==2)
+  
+  # CUENTA CUANTOS CUMPLEN CON ESA CARACTERISTICA, ASI SE OBTIENE EL VALOR DE P DE LA FORMULA
+  ls <- length(s)
+  ld <- length (d)
+  
+  # FORMULA PARA EL INDICE DE CHAO1
+  # PRIMERO CUENTA EL NUMERO DE ESPECIES QUE HAY, DESPUES UTILIZA EL CONTEO DE SINGLETONES Y DOUBLETONES.
+  return ( length(x) + ((ls)^2 / (2*ld)^2) ) # ?
+}
+
+# PARA USAR LA FUNCION
+chao1 (a)
+
+
+################################################################################
+####### Curva de Whittaker
+
+# ESTA GRAFICA ES TIPO SCATTERPLOT PERO CON PUNTOS, NO CON UNA LINEA CONTINUA
+# UTILIZA LOS DATOS DE LA PRIMERA COLUMNA DE LA BASE DE DATOS
+# TENDRA COMO TITULO GENERAL "CURVA DE WHITTAKER
+# EN EL EJE X LLEVARA UNA LEYENDA QUE INDICA QUE NUMERO DE ESPECIE ES
+# EN EL EJE Y ESTA EL NUMERO DE INDIVIDUOS POR ESPECIE
+
+plot(lunetas$estrella, main = "Curva de Whittaker",
+     xlab = "Especie", ylab = "Individuos por especie", pch=19)
+
 
