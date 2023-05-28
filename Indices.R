@@ -1,4 +1,4 @@
-lunetas <- read.csv("Raw_Data/Lunetas - Hoja 1.csv") #CARGO LA BASE DE DATOS, DONDE VIENE LA CANTIDAD DE CADA LUNETA
+lunetas <- read.csv("Raw_Data/lunetas.csv") #CARGO LA BASE DE DATOS, DONDE VIENE LA CANTIDAD DE CADA LUNETA
 
 lunetas[,2]
 
