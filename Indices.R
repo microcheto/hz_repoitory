@@ -94,4 +94,5 @@ chao1 (a)
 plot(lunetas$estrella, main = "Curva de Whittaker",
      xlab = "Especie", ylab = "Individuos por especie", pch=19)
 
+# Probar : Grafica que los acomode de mayor a menor, grafica con linea
 
