@@ -33,8 +33,8 @@ shanon <- function(x){
   #TODAS LAS ESPECIES (COLORES)
  }
    
-  print(-valorshan) #SE SIMPRIME EL VALOR FINAL, DONDE YA TIENE TODA LA SUMATORIA Y SE IMPRIME CON UN SIGNO -, PARA PODER
-  #VERLO EN POSITIVO
+  print(-valorshan) #SE SIMPRIME EL VALOR FINAL, DONDE YA TIENE TODA LA SUMA Y SE IMPRIME CON UN SIGNO -, PARA PODER
+  # VERLO EN POSITIVO
   
   
 }
@@ -52,7 +52,7 @@ shanon(estrella) #APLICAMOS LA FUNCION ANTERIOR CON NUESTRO VECTOR ESTRELLA
 ####### SIMPSON
 
 simpson <- function(x) {
-  return ( sum ( (x*(x-1)) / (sum(x)*(sum(x)-1)) ) )
+  return ( sum ( (x*(x-1) ) / (sum(x) * (sum(x)-1)) ) )
 }
 
 # DRFINI UN VECTOR PARA PROBAR LAS FUNCIONES, SELECCIONA LA PRIMERA COLUMNA DE LA BASE DE DATOS
