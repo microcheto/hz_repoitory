@@ -81,6 +81,24 @@ chao1 <- function(x) {
 # PARA USAR LA FUNCION
 chao1 (a)
 
+################################################################################
+####### DISTANCIA BRAY CURTIS
+
+bc <- function (x) {
+  
+  # PARA OBTENER LOS MINIMOS DEBO EVALUAR CUALES ESPECIES SE REPITEN
+  # Y ENLISTAR EL QUE TENGA MENOS INDIVIDUOS
+  
+  mins <- sum () # SUMA LOS MINIMOS DE LAS ESPECIES
+  
+  Si <- sum (x[,1]) # SUMA LOS INDIVIDUOS DE LA COLUMNA 1
+  
+  Sj <- sum (x[,2]) # SUMA LOS ORGANISMOS DE LA COLUMNA 2
+  
+  
+  return ( 1 - ( (2*(mins)) / (Si+Sj)) )
+}
+
 
 ################################################################################
 ####### Curva de Whittaker
