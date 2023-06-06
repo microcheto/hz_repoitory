@@ -75,7 +75,7 @@ chao1 <- function(x) {
   
   # FORMULA PARA EL INDICE DE CHAO1
   # PRIMERO CUENTA EL NUMERO DE ESPECIES QUE HAY, DESPUES UTILIZA EL CONTEO DE SINGLETONES Y DOUBLETONES.
-  return ( length(x) + ((ls)^2 / (2*ld)^2) ) # ?
+  return ( length(x) + ( (ls)^2 / (2*ld)^2) ) # ?
 }
 
 # PARA USAR LA FUNCION
